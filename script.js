@@ -60,3 +60,40 @@ export function aufgabe02(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe02]", aufgabe02)
+
+export function aufgabe03(args) {
+  const input = args
+  const result = []
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "e") {
+    }
+  }
+
+  return result.join("")
+}
+linkupExerciseHandler("[data-click=aufgabe03]", aufgabe03)
+
+export function aufgabe12(args) {
+  const input = args
+  const result = []
+
+  // Erstelle eine Variable und die Position des ersten e's zu speichern
+  let firstE = -1
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    // Finde ein e
+    if (currentElement === "e") {
+      // Speichere die position nur beim ersten e
+      if (firstE === -1) {
+        firstE = i
+      }
+    }
+  }
+
+  //Gebe die Position zurück
+  return firstE
+}
+linkupExerciseHandler("[data-click=aufgabe12]", aufgabe12)
