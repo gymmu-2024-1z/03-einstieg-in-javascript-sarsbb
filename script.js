@@ -254,3 +254,9 @@ export function aufgabe09(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe09]", aufgabe09)
+
+export function aufgabe13(args) {
+  const input = args
+  const result = []
+}
+// Erstelle eine Variable um zu testen ob in einem Text
