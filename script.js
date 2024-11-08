@@ -65,13 +65,23 @@ export function aufgabe03(args) {
   const input = args
   const result = []
 
+  // Erstelle eine Variable um alle e's zu zaehlen
+  let eCount = 0
+
   for (let i = 0; i < input.length; i++) {
+    //Zähle alle e's in einem Text
     const currentElement = input[i]
+    // Finde ein e
     if (currentElement === "e") {
+      // Zähle ein e
+      eCount++
+    } else if (currentElement === "E") {
+      // Zähle auch ein E
+      eCount++
     }
   }
-
-  return result.join("")
+  // Gebe die Anzahl der e's zurueck
+  return eCount
 }
 linkupExerciseHandler("[data-click=aufgabe03]", aufgabe03)
 
@@ -97,3 +107,136 @@ export function aufgabe12(args) {
   return firstE
 }
 linkupExerciseHandler("[data-click=aufgabe12]", aufgabe12)
+
+export function aufgabe04(args) {
+  const input = args
+  const result = []
+
+  // Erstelle eine Variable um alle Wörter in einem Text zu zählen
+  let wordCount = 0
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    // Finde ein Leerzeichen
+    if (currentElement === " ") {
+      // Zähle ein Wort
+      wordCount++
+    }
+  }
+
+  // Gebe die Anzahl der Wörter zurueck
+  return wordCount + 1
+}
+linkupExerciseHandler("[data-click=aufgabe04]", aufgabe04)
+
+export function aufgabe05(args) {
+  const input = args
+  const result = []
+
+  //Erstelle eine Variable um die Anzahl der Grossbuchstaben zu zaehlen
+  let capitalLetterCount = 0
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+    //Finde ein Leerzeichen oder ein Punkt
+    if (currentElement === " " || currentElement === ".") {
+      //Ignoriere das Leerzeichen oder das Punkt
+    } else if (currentElement === currentElement.toUpperCase()) {
+      // Zahlen ein Grossbuchstabe
+      capitalLetterCount++
+    }
+  }
+
+  //Wenn die Anzahl Grossbuchstaben grösser als 0 ist, gebe wahr zurück
+  if (capitalLetterCount > 0) {
+    return true
+  } else {
+    return false
+  }
+}
+linkupExerciseHandler("[data-click=aufgabe05]", aufgabe05)
+
+export function aufgabe06(args) {
+  const input = args
+  const result = []
+
+  // Erstelle eine Variable um alle Sonderzeichen zu zaehlen
+  let specialCharacterCount = 0
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    // Finde ein Sonderzeichen
+    if (
+      currentElement === "!" ||
+      currentElement === "?" ||
+      currentElement === "." ||
+      currentElement === "-" ||
+      currentElement === "(" ||
+      currentElement === ")" ||
+      currentElement === " " ||
+      currentElement === "," ||
+      currentElement === ":" ||
+      currentElement === ";"
+    ) {
+      // Zähle ein Sonderzeichen
+      specialCharacterCount++
+    }
+  }
+
+  // Wenn die Anzahl Sonderzeichen über 0 ist, gebe wahr zurück
+  if (specialCharacterCount > 0) {
+    return true
+  } else {
+    return false
+  }
+}
+linkupExerciseHandler("[data-click=aufgabe06]", aufgabe06)
+
+export function aufgabe07(args) {
+  const input = args
+  const result = []
+
+  // Erstelle eine Variable um zu testen ob in einem Text das Wort 'und' vorkommt
+  let wordCount = 0
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    // Finde das Wort 'und'
+    if (
+      currentElement === "u" &&
+      input[i + 1] === "n" &&
+      input[i + 2] === "d"
+    ) {
+      // Zähle das Wort 'und'
+      wordCount++
+    }
+  }
+
+  // Wenn das Wort 'und' gefunden wurde, gebe wahr zurueck
+  if (wordCount > 0) {
+    return true
+  } else {
+    return false
+  }
+}
+
+linkupExerciseHandler("[data-click=aufgabe07]", aufgabe07)
+
+export function aufgabe08(args) {
+  const input = args
+  const result = []
+
+  //Erstelle eine Variable um alle e's mit 3 zu ersetzen in einem Text
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "e") {
+      result.push("3")
+    } else {
+      result.push(currentElement)
+    }
+  }
+  return result.join("")
+}
+
+linkupExerciseHandler("[data-click=aufgabe08]", aufgabe08)
