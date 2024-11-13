@@ -258,5 +258,55 @@ linkupExerciseHandler("[data-click=aufgabe09]", aufgabe09)
 export function aufgabe13(args) {
   const input = args
   const result = []
+
+  // Erstelle eine Variable um zu testen an welcher Stelle das letzte e steht
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "e") {
+      result.push(i)
+    }
+  }
+  return result[result.length - 1]
 }
-// Erstelle eine Variable um zu testen ob in einem Text
+
+linkupExerciseHandler("[data-click=aufgabe13]", aufgabe13)
+
+export function aufgabe14(args) {
+  const input = args
+  const result = []
+
+  // Erstelle eine Variable um die Position des dritten e's zu bestimmen
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "e") {
+      result.push(i)
+    }
+  }
+  return result[2]
+}
+
+linkupExerciseHandler("[data-click=aufgabe14]", aufgabe14)
+
+export function aufgabe15(args) {
+  const input = args
+  const result = []
+
+  // Erstelle eine Variable um die Eingabe nur bis zum ersten Leerzeichen zu lesen
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement !== " ") {
+      result.push(currentElement)
+    } else {
+      break
+    }
+  }
+  return input.join("")
+}
+
+linkupExerciseHandler("[data-click=aufgabe15]", aufgabe15)
+
+export function aufgabe16(args) {}
+const input = args
+const result = []
+
+// Erstelle eine Variable um
