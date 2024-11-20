@@ -300,13 +300,47 @@ export function aufgabe15(args) {
       break
     }
   }
-  return input.join("")
+  return result.join("")
 }
 
 linkupExerciseHandler("[data-click=aufgabe15]", aufgabe15)
 
-export function aufgabe16(args) {}
-const input = args
-const result = []
+export function aufgabe18(args) {
+  const input = args
+  const result = []
 
-// Erstelle eine Variable um
+  // Erstelle eine Variable um eine Eingabe durch eine andere zu ersetzen
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "n") {
+      result.push("S")
+    } else if (currentElement === "m") {
+      result.push("r")
+    } else if (currentElement === "e") {
+      result.push("a")
+    } else if (currentElement === "Alter") {
+      result.push("16")
+    } else {
+      result.push(currentElement)
+    }
+  }
+  return result.join("")
+}
+
+linkupExerciseHandler("[data-click=aufgabe18]", aufgabe18)
+
+export function aufgabe19(args) {
+  const input = args
+  const result = []
+
+  // Erstelle eine Variable um jedes Zeichen in der Eingabe zu verdoppeln
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    result.push(currentElement)
+    result.push(currentElement)
+  }
+}
+
+return result
+
+linkupExerciseHandler("[data-click=aufgabe19]", aufgabe19)
