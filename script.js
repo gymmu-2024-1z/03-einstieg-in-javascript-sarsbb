@@ -333,14 +333,92 @@ export function aufgabe19(args) {
   const input = args
   const result = []
 
-  // Erstelle eine Variable um jedes Zeichen in der Eingabe zu verdoppeln
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     result.push(currentElement)
     result.push(currentElement)
   }
+  return result.join("")
 }
 
-return result
-
 linkupExerciseHandler("[data-click=aufgabe19]", aufgabe19)
+
+export function aufgabe20(args) {
+  const input = args
+  const result = []
+
+  //Erstelle eine Variable um zu testen ob nach jedem . ein Leerzeichen kommt
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === ".") {
+      //Erkenne ob als nächstes ein Leerzeichen kommt
+      if (input[i + 1] === " ") {
+        //return true
+      } else {
+        return false
+      }
+    }
+  }
+  return true
+}
+
+linkupExerciseHandler("[data-click=aufgabe20]", aufgabe20)
+
+export function aufgabe21(args) {
+  const input = args
+  const result = []
+
+  //Erstele eine Variable um die Eingabe umzukehren
+  for (let i = input.length - 1; i >= 0; i--) {
+    const currentElement = input[i]
+    result.push(currentElement)
+  }
+  return result.join("")
+}
+
+linkupExerciseHandler("[data-click=aufgabe21]", aufgabe21)
+
+export function aufgabe22(args) {
+  const input = args
+  const result = []
+  let switchFirst = true
+
+  //Erstelle eine Variable um alle Zeichen  mit _ zu ersetzen, bis das Zeichen k kommt, dann aufhören
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "k") {
+      switchFirst = false
+    }
+    if (switchFirst === true) {
+      result.push("_")
+    } else {
+      result.push(currentElement)
+    }
+  }
+  return result.join("")
+}
+
+linkupExerciseHandler("[data-click=aufgabe22]", aufgabe22)
+
+export function aufgabe16(args) {
+  const input = args
+  const result = []
+  let switchFirst = true
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    //Erstelle eine Varbiable um die Eingabe bis zum ersten $ als ersten Teil einer liste zu speichern
+    if (currentElement === "$") {
+      switchFirst = false
+    }
+    //Erstelle eine Variable um die restliche Eingabe als zweiten Teil einer Liste zu speichern
+    if (switchFirst === true) {
+      result.push(currentElement)
+    } else {
+      result.push(currentElement)
+    }
+  }
+  return result.join("")
+}
+
+linkupExerciseHandler("[data-click=aufgabe16]", aufgabe16)
