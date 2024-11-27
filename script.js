@@ -305,6 +305,28 @@ export function aufgabe15(args) {
 
 linkupExerciseHandler("[data-click=aufgabe15]", aufgabe15)
 
+export function aufgabe16(args) {
+  const text = args
+  let switchFirst = true
+  const listFirst = []
+  const listSecond = []
+
+  //Erstelle eine Variable um die Eingabe bis zum ersten $ als ersten Teil einer liste zu speichern
+  for (let i = 0; i < text.length; i++) {
+    const currentElement = text[i]
+    if (currentElement === "$") {
+      switchFirst = !switchFirst
+    } else if (switchFirst) {
+      listFirst.push(currentElement)
+    } else {
+      listSecond.push(currentElement)
+    }
+  }
+  return [listFirst.join(""), listSecond.join("")]
+}
+
+linkupExerciseHandler("[data-click=aufgabe16]", aufgabe16)
+
 export function aufgabe18(args) {
   const input = args
   const result = []
@@ -399,26 +421,3 @@ export function aufgabe22(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe22]", aufgabe22)
-
-export function aufgabe16(args) {
-  const input = args
-  const result = []
-  let switchFirst = true
-
-  for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
-    //Erstelle eine Varbiable um die Eingabe bis zum ersten $ als ersten Teil einer liste zu speichern
-    if (currentElement === "$") {
-      switchFirst = false
-    }
-    //Erstelle eine Variable um die restliche Eingabe als zweiten Teil einer Liste zu speichern
-    if (switchFirst === true) {
-      result.push(currentElement)
-    } else {
-      result.push(currentElement)
-    }
-  }
-  return result.join("")
-}
-
-linkupExerciseHandler("[data-click=aufgabe16]", aufgabe16)
