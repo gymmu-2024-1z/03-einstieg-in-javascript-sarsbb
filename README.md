@@ -1,4 +1,5 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/SYYUWTQg)
+
 # Einstieg ins Programmieren mit Javascript
 
 Dieses Projekt bietet viele Aufgaben mit automatischen Tests, bei denen Sie das
@@ -149,3 +150,16 @@ Testen sie, ob eine Eingabe eine Zahl ist.
 
 Testen Sie, ob in der Eingabe 2 Zahlen von einem Leerzeichen getrennt sind.
 Falls ja geben Sie die Summe als Ausgabe aus; sonst Fehlermeldung.
+
+## eigene Aufgabe 01
+
+Ersetze alle `n`s mit einem `4133`
+
+## eigene Aufgabe 02
+
+Text in ASCII umwandeln, 4 dazu addieren und zurück in einen Buchstaben
+verwandeln.
+
+## eigene Aufgabe 03
+
+Ersetze alle Punkte mit Kommazeichen und alle Kommazeichen mit einem Punkt.
