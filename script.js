@@ -493,3 +493,61 @@ export function bubbleSort(args) {
 linkupExerciseHandler("[data-click=bubbleSort]", bubbleSort)
 
 export function aufgabe17(args) {
+  const input = args
+  const totalList = []
+  const currentList = []
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+    if (currentElement === " ") {
+      totalList.push(currentList.join(""))
+      currentList.length = 0
+    } else {
+      currentList.push(currentElement)
+    }
+  }
+  totalList.push(currentList.join(""))
+  return totalList
+}
+
+linkupExerciseHandler("[data-click=aufgabe17]", aufgabe17)
+
+export function aufgabe23(args) {
+  const input = args
+  const result = []
+
+  //Erstelle eine Variable um das erste Zeichen einer Eingabe zusätzlich vorne und hinten beim Ausgeben der Eingabe zu lassen
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (i === 0) {
+      result.push(currentElement)
+    }
+    result.push(currentElement)
+    if (i === input.length - 1) {
+      result.push(currentElement)
+    }
+  }
+  return result.join("")
+}
+
+linkupExerciseHandler("[data-click=aufgabe23]", aufgabe23)
+
+export function aufgabe24(args) {
+  const input = args
+  const result = []
+
+  //Erstelle eine Variable um den platz des ersten zeichens der Variable mit dem letzten platz der Variable zu vertauschen
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (i === 0) {
+      result.push(currentElement)
+    }
+    if (i === input.length - 1) {
+      result.push(currentElement)
+    }
+    result.push(currentElement)
+  }
+  return result.join("")
+}
+
+linkupExerciseHandler("[data-click=aufgabe24]", aufgabe24)
