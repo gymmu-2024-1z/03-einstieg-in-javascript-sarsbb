@@ -23,6 +23,8 @@
       <div class="button-container">
         <!-- TODO: Hier neue Buttons erstellen. -->
 
+        <button type="button" data-click="selectionSort">selectionSort</button>
+        <button type="button" data-click="countingSort">countingSort</button>
         <button type="button" data-click="bubbleSort">bubbleSort</button>
         <button type="button" data-click="eigeneaufgabe03">
           eigene Aufgabe 03
@@ -62,6 +64,57 @@
       <section>
         <h2>Sortierverfahren</h2>
         <!-- TODO: Schreiben Sie hier zu Sortierverfahren-->
+        <h3>bubbleSort</h3>
+        <p>
+          Beim Bubblesort wird die Liste der zu sortierenden Elemente mehrfach
+          von links nach rechts durchgelaufen. Man vergleicht den linken Element
+          immer mit dem rechten und tauscht die Positionen der Elemente um, wenn
+          das rechte Element größer ist als das linke. Das Prozess wird
+          wiederholt, bis alle Elemente sortiert sind.
+        </p>
+        <h3>countingSort</h3>
+        <p>
+          Beim CountingSort werden die Elemente in der Eingabe durchgezählt. Es
+          wird gespeichert, wie oft welches Element vorkommt und es ordnet die
+          Elemente mit Hilfe dieser Informtion dann neu. So oft wie ein Element
+          vorkommt wird es auch in der richtigen Reihenfolge wiedergegeben.
+        </p>
+        <h3>selectionSort</h3>
+        <p>
+          Der SelectionSort sucht wiederholt nach dem kleinsten/grössten Element
+          einer Datenmenge und verschiebt ihn dann aus dem unsortierten Teil der
+          Datenmenge an den Anfang der Liste. Den Algorithmus kann man sehr
+          leicht anpassen, das heisst, sodass die Elemente nicht in
+          aufsteigender Reihenfolge, sonder in absteigender Reihenfolge sortiert
+          werden.
+        </p>
+        <h3>Vergleich der drei Sortierverfahren</h3>
+        <p>
+          Selection Sort, Counting Sort und Bubble Sort sind drei verschiedene
+          Sortieralgorithmen, die sich in ihrer Funktionsweise und Effizienz
+          unterscheiden.
+        </p>
+        Selection Sort funktioniert so, dass er wiederholt das kleinste Element
+        in der unsortierten Liste sucht und es an die richtige Position tauscht.
+        Die Zeit, die er dafür benötigt, ist im schlimmsten Fall proportional
+        zur Anzahl der Elemente zum Quadrat. Er ist einfach zu verstehen, aber
+        nicht sehr schnell bei großen Datenmengen. Bubble Sort vergleicht
+        benachbarte Elemente in der Liste. Wenn sie in der falschen Reihenfolge
+        sind, werden sie getauscht. Dieser Vorgang wird so lange wiederholt, bis
+        die gesamte Liste sortiert ist. Auch Bubble Sort hat eine ähnliche Zeit
+        wie Selection Sort, also auch proportional zur Anzahl der Elemente zum
+        Quadrat, und ist normalerweise langsamer. Counting Sort ist anders. Er
+        funktioniert, indem er die Häufigkeit jedes Wertes in der Liste zählt.
+        Dann nutzt er diese Zählung, um die Elemente in der richtigen
+        Reihenfolge anzuordnen. Die Zeit, die Counting Sort benötigt, ist
+        proportional zur Anzahl der Elemente plus dem Bereich der Werte. Das
+        macht ihn viel schneller, wenn die Werte in einem begrenzten Bereich
+        liegen.
+        <p>
+          Zusammenfassend kann man sagen, dass Selection Sort und Bubble Sort
+          ähnlich sind, während Counting Sort in bestimmten Situationen viel
+          effizienter ist.
+        </p>
       </section>
     </div>
 

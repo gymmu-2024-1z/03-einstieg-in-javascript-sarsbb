@@ -551,3 +551,58 @@ export function aufgabe24(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe24]", aufgabe24)
+
+export function countingSort(args) {
+  const input = args
+  const lookup = new Array(256).fill(0)
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    const ascii = currentElement.charCodeAt(0)
+    lookup[ascii] = lookup[ascii] + 1
+  }
+  const result = []
+  for (let i = 0; i < lookup.length; i++) {
+    const value = lookup[i]
+    for (let j = 0; j < value; j++) {
+      const charakter = String.fromCharCode(i)
+      result.push(charakter)
+    }
+  }
+
+  return result.join("")
+}
+
+linkupExerciseHandler("[data-click=countingSort]", countingSort)
+
+export function selectionsort(args) {
+  const input = args.split("")
+  const result = []
+
+  for (let i = 0; i < input.length; i++) {
+    let min = input[i]
+    let minIndex = i
+
+    for (let j = i + 1; j < input.length; j++) {
+      if (input[j] < min) {
+        min = input[j]
+        minIndex = j
+      }
+    }
+
+    const tmp = input[i]
+    input[i] = min
+    input[minIndex] = tmp
+
+    for (let k = i + 1; k < input.length; k++) {
+      if (input[k] < min) {
+        min = input[k]
+        minIndex = k
+      }
+    }
+    result.push(input[i])
+  }
+  return result.join("")
+}
+
+linkupExerciseHandler("[data-click=selectionsort]", selectionsort)
