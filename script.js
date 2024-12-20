@@ -48,15 +48,14 @@ linkupExerciseHandler("[data-click=aufgabe01]", aufgabe01)
 
 export function aufgabe02(args) {
   const input = args
-  const result = []
+  const result = [] // Erstellt eine leere Liste
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     const currentUpperCaseLetter = currentElement.toUpperCase()
-    result.push(currentUpperCaseLetter)
+    result.push(currentUpperCaseLetter) // Hier wird das aktuelle Zeichen ans Ende der Resultat-Liste angehängt.
   }
-
-  return result.join("")
+  return result.join("") // gibt das Resultat zurück ohne Abstände
 }
 
 linkupExerciseHandler("[data-click=aufgabe02]", aufgabe02)
@@ -66,7 +65,7 @@ export function aufgabe03(args) {
   const result = []
 
   // Erstelle eine Variable um alle e's zu zaehlen
-  let eCount = 0
+  let eCount = 0 // Zählt die e's
 
   for (let i = 0; i < input.length; i++) {
     //Zähle alle e's in einem Text
@@ -90,7 +89,7 @@ export function aufgabe12(args) {
   const result = []
 
   // Erstelle eine Variable und die Position des ersten e's zu speichern
-  let firstE = -1
+  let firstE = -1 // Speichert die Position des ersten e's
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
@@ -120,7 +119,7 @@ export function aufgabe04(args) {
     // Finde ein Leerzeichen
     if (currentElement === " ") {
       // Zähle ein Wort
-      wordCount++
+      wordCount++ // Zählt ein Wort
     }
   }
 
@@ -144,7 +143,7 @@ export function aufgabe05(args) {
       //Ignoriere das Leerzeichen oder das Punkt
     } else if (currentElement === currentElement.toUpperCase()) {
       // Zahlen ein Grossbuchstabe
-      capitalLetterCount++
+      capitalLetterCount++ // Zählt die Grossbuchstaben
     }
   }
 
@@ -249,7 +248,7 @@ export function aufgabe09(args) {
   if (input.length === 6) {
     return true
   } else {
-    return false
+    return false //wenn es nicht genau 6 Elemnte hat, gibt es false zurück
   }
 }
 
@@ -266,7 +265,7 @@ export function aufgabe13(args) {
       result.push(i)
     }
   }
-  return result[result.length - 1]
+  return result[result.length - 1] // das -1 bedeutet das letzte Element
 }
 
 linkupExerciseHandler("[data-click=aufgabe13]", aufgabe13)
@@ -295,7 +294,7 @@ export function aufgabe15(args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     if (currentElement !== " ") {
-      result.push(currentElement)
+      result.push(currentElement) //currentElement bedeutet das aktuelle Element
     } else {
       break
     }
@@ -309,7 +308,7 @@ export function aufgabe16(args) {
   const text = args
   let switchFirst = true
   const listFirst = []
-  const listSecond = []
+  const listSecond = [] // Erstellt zwei Listen, das ist die Zweite
 
   //Erstelle eine Variable um die Eingabe bis zum ersten $ als ersten Teil einer liste zu speichern
   for (let i = 0; i < text.length; i++) {
@@ -403,7 +402,7 @@ linkupExerciseHandler("[data-click=aufgabe21]", aufgabe21)
 export function aufgabe22(args) {
   const input = args
   const result = []
-  let switchFirst = true
+  let switchFirst = true // Das hier ist ein Switch, wenn es erkennt, dass das Zeichen k kommt, dann wird switchFirst auf false gesetzt
 
   //Erstelle eine Variable um alle Zeichen  mit _ zu ersetzen, bis das Zeichen k kommt, dann aufhören
   for (let i = 0; i < input.length; i++) {
@@ -412,6 +411,7 @@ export function aufgabe22(args) {
       switchFirst = false
     }
     if (switchFirst === true) {
+      //Wenn der Switch erkennt, dass das Zeichen k nicht vorhanden ist, dass "switcht" er auf true und ersetzt mit _
       result.push("_")
     } else {
       result.push(currentElement)
@@ -506,7 +506,7 @@ export function aufgabe17(args) {
       currentList.push(currentElement)
     }
   }
-  totalList.push(currentList.join(""))
+  totalList.push(currentList.join("")) // Das gibt uns die letze Liste, die gespeichert wurde aus
   return totalList
 }
 
@@ -554,7 +554,7 @@ linkupExerciseHandler("[data-click=aufgabe24]", aufgabe24)
 
 export function countingSort(args) {
   const input = args
-  const lookup = new Array(256).fill(0)
+  const lookup = new Array(256).fill(0) // Erstellt ein Array (Liste) mit 256 Elementen
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
@@ -575,7 +575,7 @@ export function countingSort(args) {
 
 linkupExerciseHandler("[data-click=countingSort]", countingSort)
 
-export function selectionsort(args) {
+export function selectionSort(args) {
   const input = args.split("")
   const result = []
 
@@ -605,4 +605,4 @@ export function selectionsort(args) {
   return result.join("")
 }
 
-linkupExerciseHandler("[data-click=selectionsort]", selectionsort)
+linkupExerciseHandler("[data-click=selectionSort]", selectionSort)
